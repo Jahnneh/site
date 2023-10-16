@@ -4,14 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/index.css">
+    <script type="importmap">
+    {
+        "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@^0.157.0/build/three.module.min.js"
+        }
+    }
+    </script>
+
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer-effects/dist/model-viewer-effects.min.js"></script>
     <title>Jahn</title>
 </head>
 <body>
-    <div id="intro-card">
 
-        <h1>Jahn</h1>
-        <h3>idiot making things</h3>
+    <div id="intro-container">
+        <div id="intro-card">
 
+            <h1>Jahnneh</h1>
+            <h3>> idiot making things</h3>
+
+            <div id="pages">
+                <div class="pages">✠ about</div>
+                <div class="pages">✠ projects</div>
+                <div class="pages">✠ contact</div>
+            </div>
+            
+            
+        </div>
+
+        <div id="intro-art">
+
+            <model-viewer id="model" alt="globe" src="./assets/models/globe.glb" camera-controls touch-action="pan-y" auto-rotate>
+                <effect-composer>
+                    <bloom-effect strength="1" threshold="0.7" radius="0.15"></bloom-effect>
+                    <pixelate-effect granularity="2"></pixelate-effect>
+                  </effect-composer>
+            </model-viewer>
+
+        </div>
     </div>
 </body>
 </html>
